@@ -37,4 +37,6 @@ jobs:
       run: npm run build
       
     - name: Deploy
-      run: npm run deploy
+      run: |
+            git config user.name "balvarez-hub" && git config user.email "balvarez-hub@hubescuela.com"
+            npm run deploy
