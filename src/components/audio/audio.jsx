@@ -1,6 +1,6 @@
 import { Button, FormControl, FormControlLabel, FormLabel, Grid, Radio, RadioGroup } from '@material-ui/core';
 import React, { useCallback, useEffect, useState } from 'react';
-import { getAudioQuery } from '../../shared/MediaStreamConstraints';
+import { audioQuery } from '../../shared/MediaStreamConstraints';
 
 const Audio = () => {
   const STATES = {
@@ -21,7 +21,7 @@ const Audio = () => {
 
   const getAudioPermission = async (event) => {
     try {
-      await navigator.mediaDevices.getUserMedia(getAudioQuery);
+      await navigator.mediaDevices.getUserMedia(audioQuery);
     } catch (e) {
       console.error(`Error: ${e}`);
     } finally {
