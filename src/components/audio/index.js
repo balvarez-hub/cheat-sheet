@@ -1,1 +1,1 @@
-export { default as Audio } from './audio';
+export { default as AudioComponent } from './audio';
