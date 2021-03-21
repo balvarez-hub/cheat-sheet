@@ -9,30 +9,24 @@ const AudioComponent = () => {
   const [isAudioPermisionChanged, changeAudioPermission] = useState(false);
   const [audioPlayer, setAudioPlayer] = useState(null);
 
-  const list = [
-    <AudioPermission isAudioPermisionChanged={isAudioPermisionChanged} changeAudioPermission={changeAudioPermission} />,
-    <Grid item container justify="center" alignContent="flex-start" spacing={1}>
-      <Grid item>
-        <AudioRecorder
-          currentStatus={currentStatus}
-          setCurrentStatus={setCurrentStatus}
-          setAudioPlayer={setAudioPlayer}
-          changeAudioPermission={changeAudioPermission}
-        />
-      </Grid>
-      <Grid item>
-        <AudioPlayer audioPlayer={audioPlayer} currentStatus={currentStatus} />
-      </Grid>
-    </Grid>,
-  ];
-
   return (
-    <Grid container spacing={1}>
-      {list.map((element, index) => (
-        <Grid container item key={index} justify="center" alignContent="center">
-          {element}
+    <Grid container justify="center" alignContent="center" spacing={1}>
+      <Grid item>
+        <AudioPermission isAudioPermisionChanged={isAudioPermisionChanged} changeAudioPermission={changeAudioPermission} />
+      </Grid>
+      <Grid item container justify="center" alignContent="center" spacing={1}>
+        <Grid item>
+          <AudioRecorder
+            currentStatus={currentStatus}
+            setCurrentStatus={setCurrentStatus}
+            setAudioPlayer={setAudioPlayer}
+            changeAudioPermission={changeAudioPermission}
+          />
         </Grid>
-      ))}
+        <Grid item>
+          <AudioPlayer audioPlayer={audioPlayer} currentStatus={currentStatus} />
+        </Grid>
+      </Grid>
     </Grid>
   );
 };

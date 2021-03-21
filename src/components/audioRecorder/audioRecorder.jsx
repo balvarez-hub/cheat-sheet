@@ -92,12 +92,12 @@ const AudioRecorder = ({ currentStatus, setCurrentStatus, setAudioPlayer, change
             <div>{`${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`}</div>
           </Grid>
           <Grid item>
-            <Fab size="small" color="secondary" aria-label="add" onClick={onCancell}>
+            <Fab size="small" color="primary" aria-label="add" onClick={onCancell}>
               <CloseIcon />
             </Fab>
           </Grid>
           <Grid item>
-            <Fab size="small" color="secondary" aria-label="add" onClick={onSuccess}>
+            <Fab size="small" color="primary" aria-label="add" onClick={onSuccess}>
               <CheckIcon />
             </Fab>
           </Grid>
@@ -109,7 +109,7 @@ const AudioRecorder = ({ currentStatus, setCurrentStatus, setAudioPlayer, change
     default:
       return (
         <Grid item>
-          <Fab size="small" color="secondary" aria-label="add" onClick={onRecord}>
+          <Fab size="small" color="primary" aria-label="add" onClick={onRecord}>
             <MicIcon />
           </Fab>
         </Grid>

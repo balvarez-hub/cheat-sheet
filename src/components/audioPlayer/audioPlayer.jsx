@@ -15,12 +15,12 @@ const AudioPlayer = ({ audioPlayer, currentStatus }) => {
     currentStatus === RECORDING_STATE.SUCCESS && (
       <Grid item container spacing={1}>
         <Grid item>
-          <Fab size="small" color="secondary" aria-label="add" onClick={onPlay}>
+          <Fab size="small" color="primary" aria-label="add" onClick={onPlay}>
             <PlayArrowIcon />
           </Fab>
         </Grid>
         <Grid item>
-          <Fab size="small" color="secondary" aria-label="add" onClick={onPause}>
+          <Fab size="small" color="primary" aria-label="add" onClick={onPause}>
             <PauseIcon />
           </Fab>
         </Grid>
